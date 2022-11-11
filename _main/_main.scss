@@ -1,11 +1,13 @@
 @import "../styles/variables";
 
 .main-section {
-    height: 100vh;
+    height: fit-content;
+    padding-bottom: 40px;
     background-image: url(../bcgs/main-image.jpg);
     background-color: #1C1C1C;
     background-repeat: no-repeat;
     background-size: cover;
+     background-position: right center;
     font-family: 'Montserrat';
     font-weight: 500;
     color: $dark;
