@@ -1,13 +1,11 @@
 @import "../styles/variables";
 
 .main-section {
-    height: fit-content;
-    padding-bottom: 40px;
-    background-image: url(../bcgs/main-image.jpg);
+    height: 100vh;
+    background-image: url(../images/main-image.jpg);
     background-color: #1C1C1C;
     background-repeat: no-repeat;
     background-size: cover;
-     background-position: right center;
     font-family: 'Montserrat';
     font-weight: 500;
     color: $dark;
@@ -255,19 +253,19 @@
 
 
 .house-type {
-    background-image: url(../_main/images/house.jpg);
+    background-image: url(../images/house.jpg);
 }
 .bath-type {
-    background-image: url(../_main/images/bath.jpg);
+    background-image: url(../images/bath.jpg);
 }
 .garage-type {
-    background-image: url(../_main/images/garage.jpg);
+    background-image: url(../images/garage.jpg);
 }
 .awning-type {
-    background-image: url(../_main/images/awning.jpg);
+    background-image: url(../images/awning.jpg);
 }
 .commercial-type {
-    background-image: url(../_main/images/commercial.jpg);
+    background-image: url(../images/commercial.jpg);
 }
 
 .building-types__count {
@@ -319,27 +317,27 @@
 }   
 
 .beam-type {
-    background-image: url(../_main/images/beam.jpg);
+    background-image: url(../images/beam.jpg);
 }
 
 .gun-carriage-type {
-    background-image: url(../_main/images/gun-carriage.jpg);
+    background-image: url(../images/gun-carriage.jpg);
 }
 .half-timbered-type {
-    background-image: url(../_main/images/half-timbered.jpg);
+    background-image: url(../images/half-timbered.jpg);
 }
 .log-type {
-    background-image: url(../_main/images/log.jpg);
+    background-image: url(../images/log.jpg);
 }
 .frame-type {
-    background-image: url(../_main/images/frame.jpg);
+    background-image: url(../images/frame.jpg);
 }
 .clt-type {
-    background-image: url(../_main/images/clt.jpg);
+    background-image: url(../images/clt.jpg);
 }
 .panel-frame-type {
-    background-image: url(../_main/images/panel-frame.jpg);
+    background-image: url(../images/panel-frame.jpg);
 }
 .kelo-type {
-    background-image: url(../_main/images/kelo.jpg);
+    background-image: url(../images/kelo.jpg);
 }
