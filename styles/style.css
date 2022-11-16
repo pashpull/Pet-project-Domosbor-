@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "normalize v8.0.1.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap");
@@ -23,6 +24,19 @@ li {
 
 a {
   text-decoration: none;
+}
+
+.header {
+  position: relative;
+  z-index: 10;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.05);
+}
+
+.header_modal-active {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .top-bar {
@@ -571,4 +585,107 @@ a {
   font-size: 14px;
   color: #49423D;
   text-decoration: underline;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: fixed;
+  z-index: 9;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 200%;
+  background-color: #fff;
+  transition: all 0.4s ease;
+}
+.modal_active {
+  bottom: 0;
+}
+
+.login-modal {
+  font-family: "Montserrat";
+}
+
+.login-modal__choiсe {
+  display: flex;
+  position: relative;
+}
+
+.login-modal__choiсe-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: #f5f5f6;
+  border: none;
+  border-top: 3px solid #8DB338;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+.login-modal__choiсe-wrap_pro {
+  left: 50%;
+}
+
+.login-modal__choiсe-option {
+  width: 50%;
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #49423D;
+  padding: 13px 37px;
+  transition: all 0.2s ease;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.login-modal__choiсe-option_active {
+  font-weight: 700;
+}
+
+.login-modal__forms {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #f5f5f6;
+}
+
+.login-modal__form-title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #8DB338;
+  margin-bottom: 12px;
+}
+
+.login-modal__input {
+  padding: 12px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.login-modal__in-btn {
+  width: 350px;
+}
+
+.login-modal__swap-to-reg {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #8DB338;
+  width: fit-content;
+  margin: 0 auto;
+  border: none;
+  background: transparent;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

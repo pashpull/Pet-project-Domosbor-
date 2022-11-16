@@ -4,8 +4,94 @@
 let modBtn = document.querySelector('.modal-btn');
 
 modBtn.addEventListener('click', () => {
+    document.querySelector('.header').classList.toggle('header_modal-active')
     modBtn.classList.toggle('modal-btn_active');
+    modalWrap.classList.toggle('modal_active');
+    bodyOverflow()
+    if(modalContent.innerHTML !== "") {
+        modalContent.innerHTML = ""
+    }
 });
+
+// модальное окно
+let modalWrap = document.querySelector('.modal');
+let callback = document.querySelector('.callback');
+let login = document.querySelector('.login');
+let advancedSearch = document.querySelector('.config__choice-more');
+let modalContent = document.querySelector('.modal__content')
+
+const modalActive = () => {
+    modalWrap.classList.add('modal_active');
+    modBtn.classList.add('modal-btn_active');
+    document.querySelector('.header').classList.add('header_modal-active')
+}
+
+const bodyOverflow = () => {
+    if(modalWrap.classList.contains('modal_active')) {
+        document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+    } else {
+        document.getElementsByTagName('body')[0].style.overflow = 'auto';
+    }
+}
+
+callback.addEventListener('click', () => {
+    modalActive();
+    bodyOverflow()
+});
+
+login.addEventListener('click', () => {
+    modalActive();
+    bodyOverflow();
+    if (!document.querySelector('.login-modal')) {
+        modalContent.innerHTML = 
+        `<div class="login-modal">
+            <div class="login-modal__choiсe">
+                <div class="login-modal__choiсe-wrap"></div>
+                <button class="login-modal__choiсe-option login-modal__choiсe-option_active">Пользователь</button>
+                <button class="login-modal__choiсe-option">Профессионал</button>
+            </div>
+            <div class="login-modal__forms">
+                <div class="login-modal__form">
+                    <div class="login-modal__form-title">Электронная почта / Телефон</div>
+                    <input class="login-modal__input" type="text" id="mail-or-phone" placeholder="Электронная почта / Телефон">
+                </div>
+                <div class="login-modal__form">
+                    <div class="login-modal__form-title">Пароль</div>
+                    <input class="login-modal__input type="text" id="mail-or-phone" placeholder="Пароль">
+                </div>
+                <button class="login-modal__in-btn btn-invert">Войти</button>
+                <button class="login-modal__swap-to-reg">Регистрация</button>
+            </div>
+        </div>`;
+    }
+    if (document.querySelector('.login-modal')) {
+
+        document.querySelector('.login-modal__choiсe').onclick = function(event) {
+            
+            let target = event.target; 
+
+            if (target.tagName === 'BUTTON'){
+                document.querySelector('.login-modal__choiсe-option_active').classList.remove('login-modal__choiсe-option_active')
+                target.classList.add('login-modal__choiсe-option_active');  
+            }
+
+            if (document.querySelectorAll('.login-modal__choiсe-option')[1].classList.contains('login-modal__choiсe-option_active')){
+                
+                document.querySelector('.login-modal__choiсe-wrap').classList.add('login-modal__choiсe-wrap_pro')
+            }else {
+                document.querySelector('.login-modal__choiсe-wrap').classList.remove('login-modal__choiсe-wrap_pro')
+            }
+        };
+    }
+});
+
+advancedSearch.addEventListener('click', () => {
+    modalActive();
+    bodyOverflow()
+});
+
+
+
 
 
 // форма поиска
