@@ -67,7 +67,7 @@ login.addEventListener('click', () => {
     if (document.querySelector('.login-modal')) {
 
         document.querySelector('.login-modal__choiсe').onclick = function(event) {
-            
+
             let target = event.target; 
 
             if (target.tagName === 'BUTTON'){
@@ -89,10 +89,6 @@ advancedSearch.addEventListener('click', () => {
     modalActive();
     bodyOverflow()
 });
-
-
-
-
 
 // форма поиска
 
