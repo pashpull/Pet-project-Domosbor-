@@ -249,6 +249,7 @@
     }
     &:hover {
         background-size: 104%;
+        padding-left: 22px;
         &:before {
             background: rgba(0,0,0,.2);
         }
@@ -300,8 +301,9 @@
 }
 
 .technology-types__item {
+    position: relative;
     padding: 46px 20px;
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     height: 120px;
     border: 2px solid $light;
@@ -309,6 +311,25 @@
     font-size: 20px;
     line-height: 28px;
     color: $dark;
+    transition: all 0.4s ease;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,.0);
+        z-index: 1;
+        transition: all 0.4s ease;
+    }
+    &:hover {
+        background-size: 104%;
+        padding-left: 22px;
+        &:before {
+            background: rgba(0,0,0,.2);
+        }
+    }
 }   
 
 .beam-type {
@@ -336,13 +357,11 @@
     background-image: url(../images/kelo.jpg);
 }
 
-
-
 .useful-links__img {
     height: 150px;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;  
 }
 
 .num-of-floors {
@@ -389,4 +408,7 @@
     font-size: 14px;
     color: $dark;
     text-decoration: underline; 
+    &:hover {
+        color: $main;
+    }
 }

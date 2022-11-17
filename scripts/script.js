@@ -20,6 +20,8 @@ let login = document.querySelector('.login');
 let advancedSearch = document.querySelector('.config__choice-more');
 let modalContent = document.querySelector('.modal__content')
 
+
+
 const modalActive = () => {
     modalWrap.classList.add('modal_active');
     modBtn.classList.add('modal-btn_active');
@@ -53,11 +55,11 @@ login.addEventListener('click', () => {
             <div class="login-modal__forms">
                 <div class="login-modal__form">
                     <div class="login-modal__form-title">Электронная почта / Телефон</div>
-                    <input class="login-modal__input" type="text" id="mail-or-phone" placeholder="Электронная почта / Телефон">
+                    <input class="login-modal__input modal-input" type="text" id="mail-or-phone" placeholder="Электронная почта / Телефон">
                 </div>
                 <div class="login-modal__form">
                     <div class="login-modal__form-title">Пароль</div>
-                    <input class="login-modal__input type="text" id="mail-or-phone" placeholder="Пароль">
+                    <input class="login-modal__input modal-input" type="text" id="mail-or-phone" placeholder="Пароль">
                 </div>
                 <button class="login-modal__in-btn btn-invert">Войти</button>
                 <button class="login-modal__swap-to-reg">Регистрация</button>
@@ -65,6 +67,8 @@ login.addEventListener('click', () => {
         </div>`;
     }
     if (document.querySelector('.login-modal')) {
+
+        let swapToRegBtn = document.querySelector('.login-modal__swap-to-reg')
 
         document.querySelector('.login-modal__choiсe').onclick = function(event) {
 
@@ -82,7 +86,26 @@ login.addEventListener('click', () => {
                 document.querySelector('.login-modal__choiсe-wrap').classList.remove('login-modal__choiсe-wrap_pro')
             }
         };
+        
+        swapToRegBtn.addEventListener('click', () => {
+            console.log(swapToRegBtn)
+            console.log('swapToRegBtn')
+            modalContent.innerHTML = 
+                `<div class="modal-registration">
+                <div class="modal-registration__top">
+                    <h2 class="modal-registration__title">Регистрация</h2>
+                    <h3 class="modal-registration__subtitle">Введите почту и пароль</h2>
+                </div>
+                <div class="modal-registration__forms">
+                    <input class="modal-registration__input modal-input" type="text" placeholder="Электронная почта">
+                    <input class="modal-registration__input modal-input" type="password" placeholder="Пароль">
+                    <input class="modal-registration__input modal-input" type="password" placeholder="Пароль повторно">             
+                </div>
+                <button class="modal-registration__btn btn-invert">Регистрация</button>
+            </div>`;
+        });
     }
+   
 });
 
 advancedSearch.addEventListener('click', () => {

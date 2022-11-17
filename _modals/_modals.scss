@@ -17,10 +17,14 @@
         bottom: 0;
     }
 }
+// .modal__content {
+
+// }
 
 .login-modal {
-    font-family: 'Montserrat';
-    
+    font-family: 'Montserrat';   
+    position: relative;
+    z-index: 9;
 }
 
 .login-modal__choiсe {
@@ -76,7 +80,7 @@
     color: $main;
     margin-bottom: 12px;
 }
-.login-modal__input {
+.modal-input {
     padding: 12px;
     font-weight: 400;
     font-size: 16px;
@@ -100,6 +104,39 @@
     border: none;
     background: transparent;
     cursor: pointer;
+}
+
+.modal-registration {
+    font-family: 'Montserrat';
+}
+.modal-registration__top {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.modal-registration__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-transform: uppercase;
+    color: $main;
+    margin-bottom: 10px;
+}
+.modal-registration__subtitle {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: $dark;
+}
+.modal-registration__forms {
+    display: flex;
+    flex-direction: column;
+}
+.modal-registration__input {
+    background-color: $light;
+    margin-bottom: 30px;
+}
+.modal-registration__btn {
+    width: 410px;
 }
 
 

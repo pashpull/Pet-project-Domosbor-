@@ -28,7 +28,7 @@ a {
 
 .header {
   position: relative;
-  z-index: 10;
+  z-index: 20;
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.05);
 }
 
@@ -437,6 +437,7 @@ a {
 }
 .building-types__item:hover {
   background-size: 104%;
+  padding-left: 22px;
 }
 .building-types__item:hover:before {
   background: rgba(0, 0, 0, 0.2);
@@ -490,8 +491,9 @@ a {
 }
 
 .technology-types__item {
+  position: relative;
   padding: 46px 20px;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   height: 120px;
   border: 2px solid #f5f5f6;
@@ -499,6 +501,25 @@ a {
   font-size: 20px;
   line-height: 28px;
   color: #49423D;
+  transition: all 0.4s ease;
+}
+.technology-types__item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+  z-index: 1;
+  transition: all 0.4s ease;
+}
+.technology-types__item:hover {
+  background-size: 104%;
+  padding-left: 22px;
+}
+.technology-types__item:hover:before {
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .beam-type {
@@ -586,6 +607,9 @@ a {
   color: #49423D;
   text-decoration: underline;
 }
+.useful-links__link:hover {
+  color: #8DB338;
+}
 
 .modal {
   display: flex;
@@ -607,6 +631,8 @@ a {
 
 .login-modal {
   font-family: "Montserrat";
+  position: relative;
+  z-index: 9;
 }
 
 .login-modal__choiсe {
@@ -664,7 +690,7 @@ a {
   margin-bottom: 12px;
 }
 
-.login-modal__input {
+.modal-input {
   padding: 12px;
   font-weight: 400;
   font-size: 16px;
@@ -688,4 +714,43 @@ a {
   border: none;
   background: transparent;
   cursor: pointer;
+}
+
+.modal-registration {
+  font-family: "Montserrat";
+}
+
+.modal-registration__top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.modal-registration__title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: uppercase;
+  color: #8DB338;
+  margin-bottom: 10px;
+}
+
+.modal-registration__subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #49423D;
+}
+
+.modal-registration__forms {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-registration__input {
+  background-color: #f5f5f6;
+  margin-bottom: 30px;
+}
+
+.modal-registration__btn {
+  width: 410px;
 }/*# sourceMappingURL=style.css.map */
