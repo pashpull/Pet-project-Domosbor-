@@ -172,6 +172,7 @@ a {
   flex-direction: column;
   align-items: center;
   width: 187px;
+  cursor: pointer;
 }
 .callback__number {
   font-weight: 700;
@@ -823,6 +824,12 @@ a {
   line-height: 24px;
   color: #8DB338;
   margin-bottom: 20px;
+}
+
+.address {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 .footer-content__social {
