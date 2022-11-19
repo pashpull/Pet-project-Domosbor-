@@ -407,7 +407,8 @@
     font-weight: 400;
     font-size: 14px;
     color: $dark;
-    text-decoration: underline; 
+    text-decoration: underline;
+    transition: all 0.2s ease;
     &:hover {
         color: $main;
     }

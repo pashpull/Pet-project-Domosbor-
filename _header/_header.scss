@@ -154,6 +154,9 @@
         font-size: 20px;
         color: $dark;
         transition: all 0.4s ease;
+        &_footer {
+            color: $light;
+        }
     }
     &__offer {
         font-weight: 500;
