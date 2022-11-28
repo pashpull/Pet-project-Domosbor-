@@ -11,6 +11,51 @@ modBtn.addEventListener('click', () => {
     if(modalContent.innerHTML !== "") {
         modalContent.innerHTML = ""
     }
+    if (!document.querySelector('.modal-login')) {
+        modalContent.innerHTML = 
+        `<div class="modal-menu">
+            <div class="info-block info-block_menu">
+                <h3 class="info-block__title info-block__title_menu">Типы строений</h3>
+                <ul class="info-block__list info-block__list_menu">
+                    <li class="info-block__list-item">
+                        <a href="#" class="info-block__list-link info-block__list-link_menu">Дома</a>
+                    </li>
+                    <li class="info-block__list-item">
+                        <a href="#" class="info-block__list-link info-block__list-link_menu">Бани</a>
+                    </li>
+                    <li class="info-block__list-item">
+                        <a href="#" class="info-block__list-link info-block__list-link_menu">Гаражи</a>
+                    </li>
+                    <li class="info-block__list-item">
+                        <a href="#" class="info-block__list-link info-block__list-link_menu">Навесы</a>
+                    </li>
+                    <li class="info-block__list-item">
+                        <a href="#" class="info-block__list-link info-block__list-link_menu">Коммерческие</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="info-block info-block_menu">
+                <h3 class="info-block__title info-block__title_menu">Типы строений</h3>
+                <ul class="info-block__list info-block__list_menu">
+                    <li class="info-block__list-item">
+                        <a href="#" class="info-block__list-link info-block__list-link_menu">Дома</a>
+                    </li>
+                    <li class="info-block__list-item">
+                        <a href="#" class="info-block__list-link info-block__list-link_menu">Бани</a>
+                    </li>
+                    <li class="info-block__list-item">
+                        <a href="#" class="info-block__list-link info-block__list-link_menu">Гаражи</a>
+                    </li>
+                    <li class="info-block__list-item">
+                        <a href="#" class="info-block__list-link info-block__list-link_menu">Навесы</a>
+                    </li>
+                    <li class="info-block__list-item">
+                        <a href="#" class="info-block__list-link info-block__list-link_menu">Коммерческие</a>
+                    </li>
+                </ul>
+            </div>  
+        </div>`;
+    }
 });
 
 // модальное окно
@@ -39,51 +84,75 @@ const bodyOverflow = () => {
 callback.addEventListener('click', () => {
     modalActive();
     bodyOverflow()
+    if (!document.querySelector('.modal-login')) {
+        modalContent.innerHTML = 
+        `<div class="modal-callback">
+            <div class="modal-top">
+                <h2 class="modal-top__title">Форма связи</h2>
+            </div>
+            <div class="modal-forms">
+                <input class="modal-input modal-input_with-bcg" type="text" placeholder="Имя">
+                <input class="modal-input modal-input_with-bcg" type="email" placeholder="Электронная почта">
+                <input class="modal-input modal-input_with-bcg" type="tel" placeholder="Телефон">      
+                <textarea class="modal-input modal-input_with-bcg" type="text" placeholder="Сообщение" style="resize: none;"></textarea>
+                <div class="choose-file">
+                    <div class="choose-file__lable">
+                        <div class="choose-file__img">
+                            <img src="images/choose-file.svg" alt="Добавить файл">
+                        </div>
+                        <span class="choose-file__text">Прикрепить файлы</span>
+                    </div>
+                    <input class="choose-file__input" type="file">    
+                </div>    
+            </div>
+            <button class="modal-registration__btn btn-invert">Написать</button>
+        </div>`;
+    }
 });
 
 login.addEventListener('click', () => {
     modalActive();
     bodyOverflow();
-    if (!document.querySelector('.login-modal')) {
+    if (!document.querySelector('.modal-login')) {
         modalContent.innerHTML = 
-        `<div class="login-modal">
-            <div class="login-modal__choiсe">
-                <div class="login-modal__choiсe-wrap"></div>
-                <button class="login-modal__choiсe-option login-modal__choiсe-option_active">Пользователь</button>
-                <button class="login-modal__choiсe-option">Профессионал</button>
+        `<div class="modal-login">
+            <div class="modal-login__choiсe">
+                <div class="modal-login__choiсe-wrap"></div>
+                <button class="modal-login__choiсe-option modal-login__choiсe-option_active">Пользователь</button>
+                <button class="modal-login__choiсe-option">Профессионал</button>
             </div>
-            <div class="login-modal__forms">
-                <div class="login-modal__form">
-                    <div class="login-modal__form-title">Электронная почта / Телефон</div>
-                    <input class="login-modal__input modal-input" type="text" id="mail-or-phone" placeholder="Электронная почта / Телефон">
+            <div class="modal-login__forms">
+                <div class="modal-login__form">
+                    <div class="modal-login__form-title">Электронная почта / Телефон</div>
+                    <input class="modal-input" type="text" id="mail-or-phone" placeholder="Электронная почта / Телефон">
                 </div>
-                <div class="login-modal__form">
-                    <div class="login-modal__form-title">Пароль</div>
-                    <input class="login-modal__input modal-input" type="text" id="mail-or-phone" placeholder="Пароль">
+                <div class="modal-login__form">
+                    <div class="modal-login__form-title">Пароль</div>
+                    <input class="modal-input" type="text" id="mail-or-phone" placeholder="Пароль">
                 </div>
-                <button class="login-modal__in-btn btn-invert">Войти</button>
-                <button class="login-modal__swap-to-reg">Регистрация</button>
+                <button class="modal-login__in-btn btn-invert">Войти</button>
+                <button class="modal-login__swap-to-reg">Регистрация</button>
             </div>
         </div>`;
     }
-    if (document.querySelector('.login-modal')) {
+    if (document.querySelector('.modal-login')) {
 
-        let swapToRegBtn = document.querySelector('.login-modal__swap-to-reg')
+        let swapToRegBtn = document.querySelector('.modal-login__swap-to-reg')
 
-        document.querySelector('.login-modal__choiсe').onclick = function(event) {
+        document.querySelector('.modal-login__choiсe').onclick = function(event) {
 
             let target = event.target; 
 
             if (target.tagName === 'BUTTON'){
-                document.querySelector('.login-modal__choiсe-option_active').classList.remove('login-modal__choiсe-option_active')
-                target.classList.add('login-modal__choiсe-option_active');  
+                document.querySelector('.modal-login__choiсe-option_active').classList.remove('modal-login__choiсe-option_active')
+                target.classList.add('modal-login__choiсe-option_active');  
             }
 
-            if (document.querySelectorAll('.login-modal__choiсe-option')[1].classList.contains('login-modal__choiсe-option_active')){
+            if (document.querySelectorAll('.modal-login__choiсe-option')[1].classList.contains('modal-login__choiсe-option_active')){
                 
-                document.querySelector('.login-modal__choiсe-wrap').classList.add('login-modal__choiсe-wrap_pro')
+                document.querySelector('.modal-login__choiсe-wrap').classList.add('modal-login__choiсe-wrap_pro')
             }else {
-                document.querySelector('.login-modal__choiсe-wrap').classList.remove('login-modal__choiсe-wrap_pro')
+                document.querySelector('.modal-login__choiсe-wrap').classList.remove('modal-login__choiсe-wrap_pro')
             }
         };
         
@@ -92,17 +161,17 @@ login.addEventListener('click', () => {
             console.log('swapToRegBtn')
             modalContent.innerHTML = 
                 `<div class="modal-registration">
-                <div class="modal-registration__top">
-                    <h2 class="modal-registration__title">Регистрация</h2>
-                    <h3 class="modal-registration__subtitle">Введите почту и пароль</h2>
-                </div>
-                <div class="modal-registration__forms">
-                    <input class="modal-registration__input modal-input" type="text" placeholder="Электронная почта">
-                    <input class="modal-registration__input modal-input" type="password" placeholder="Пароль">
-                    <input class="modal-registration__input modal-input" type="password" placeholder="Пароль повторно">             
-                </div>
-                <button class="modal-registration__btn btn-invert">Регистрация</button>
-            </div>`;
+                    <div class="modal-top">
+                        <h2 class="modal-top__title">Регистрация</h2>
+                        <h3 class="modal-top__subtitle">Введите почту и пароль</h2>
+                    </div>
+                    <div class="modal-forms">
+                        <input class="modal-input modal-input_with-bcg" type="text" placeholder="Электронная почта">
+                        <input class="modal-input modal-input_with-bcg" type="password" placeholder="Пароль">
+                        <input class="modal-input modal-input_with-bcg" type="password" placeholder="Пароль повторно">             
+                    </div>
+                    <button class="modal-registration__btn btn-invert">Регистрация</button>
+                </div>`;
         });
     }
    

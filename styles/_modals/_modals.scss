@@ -1,5 +1,3 @@
-@import "../styles/variables";
-
 .modal {
     display: flex;
     align-items: center;
@@ -8,30 +6,27 @@
     position: fixed;
     z-index: 9;
     left: 0;
-    right: 0;
+    right: 100vw;
     top: 0;
-    bottom: 200%;
+    bottom: 0;
     background-color: #fff;
     transition: all 0.4s ease;
     &_active {
-        bottom: 0;
+        right: 0;
     }
 }
-// .modal__content {
 
-// }
-
-.login-modal {
+.modal__content {
     font-family: 'Montserrat';   
     position: relative;
     z-index: 9;
 }
 
-.login-modal__choiсe {
+.modal-login__choiсe {
     display: flex;
     position: relative;
 }
-.login-modal__choiсe-wrap {
+.modal-login__choiсe-wrap {
     position: absolute;
     left: 0;
     top: 0;
@@ -46,7 +41,7 @@
         left: 50%;
     }
 }
-.login-modal__choiсe-option {
+.modal-login__choiсe-option {
     width: 50%;
     position: relative;
     z-index: 2;
@@ -64,7 +59,7 @@
     }
 }
 
-.login-modal__forms {
+.modal-login__forms {
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -73,7 +68,7 @@
 }
 // .login-modal__form {
 // }
-.login-modal__form-title {
+.modal-login__form-title {
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
@@ -90,11 +85,11 @@
     outline: none;
 }
 
-.login-modal__in-btn {
+.modal-login__in-btn {
     width: 350px;
 }
 
-.login-modal__swap-to-reg {
+.modal-login__swap-to-reg {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
@@ -109,11 +104,11 @@
 .modal-registration {
     font-family: 'Montserrat';
 }
-.modal-registration__top {
+.modal-top {
     text-align: center;
     margin-bottom: 40px;
 }
-.modal-registration__title {
+.modal-top__title {
     font-weight: 700;
     font-size: 32px;
     line-height: 39px;
@@ -121,17 +116,17 @@
     color: $main;
     margin-bottom: 10px;
 }
-.modal-registration__subtitle {
+.modal-top__subtitle {
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
     color: $dark;
 }
-.modal-registration__forms {
+.modal-forms {
     display: flex;
     flex-direction: column;
 }
-.modal-registration__input {
+.modal-input_with-bcg {
     background-color: $light;
     margin-bottom: 30px;
 }
@@ -140,3 +135,63 @@
 }
 
 
+.choose-file {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.choose-file__lable {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+// .choose-file__img {
+// }
+.choose-file__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+.choose-file__input {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+}
+
+.modal-menu {
+    margin-right: 50vw;
+    margin-top: -30vh;
+}
+
+.info-block_menu {
+    position: relative;
+}
+
+.info-block__title_menu {
+    cursor: pointer;
+}
+
+.info-block__list {
+    &_menu {
+    position: absolute;
+    top: 0;
+    left: 110%;
+    right: 100%;
+    overflow: hidden;
+    transition: all .4s ease;
+    }
+    &_active {
+        right: -150%;
+    }
+}
+
+
+.info-block__list-link_menu {
+    color: $dark;
+    &:hover {
+        color: $main;
+    }
+}

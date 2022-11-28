@@ -1,8 +1,6 @@
 // normalize
 @import "normalize v8.0.1.css";
-// body {
-//     overflow: auto;
-// }
+
 * {
     margin: 0;
     padding: 0;
@@ -32,16 +30,16 @@ a {
 
 // main styles ???
 
-
+@import '_variables.scss';
 
 // blocks
-@import '../_header/header.scss';
+@import '_header/header.scss';
 
-@import '../_main/main.scss';
+@import '_main/main.scss';
 
-@import '../_modals/modals.scss';
+@import '_modals/_modals.scss';
 
-@import '../_footer/footer.scss';
+@import '_footer/footer.scss';
 
 
 

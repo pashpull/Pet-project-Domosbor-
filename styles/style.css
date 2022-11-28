@@ -624,28 +624,28 @@ a {
   position: fixed;
   z-index: 9;
   left: 0;
-  right: 0;
+  right: 100vw;
   top: 0;
-  bottom: 200%;
+  bottom: 0;
   background-color: #fff;
   transition: all 0.4s ease;
 }
 .modal_active {
-  bottom: 0;
+  right: 0;
 }
 
-.login-modal {
+.modal__content {
   font-family: "Montserrat";
   position: relative;
   z-index: 9;
 }
 
-.login-modal__choiсe {
+.modal-login__choiсe {
   display: flex;
   position: relative;
 }
 
-.login-modal__choiсe-wrap {
+.modal-login__choiсe-wrap {
   position: absolute;
   left: 0;
   top: 0;
@@ -657,11 +657,11 @@ a {
   transition: all 0.2s ease;
   z-index: 1;
 }
-.login-modal__choiсe-wrap_pro {
+.modal-login__choiсe-wrap_pro {
   left: 50%;
 }
 
-.login-modal__choiсe-option {
+.modal-login__choiсe-option {
   width: 50%;
   position: relative;
   z-index: 2;
@@ -675,11 +675,11 @@ a {
   border: none;
   cursor: pointer;
 }
-.login-modal__choiсe-option_active {
+.modal-login__choiсe-option_active {
   font-weight: 700;
 }
 
-.login-modal__forms {
+.modal-login__forms {
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -687,7 +687,7 @@ a {
   background-color: #f5f5f6;
 }
 
-.login-modal__form-title {
+.modal-login__form-title {
   font-weight: 600;
   font-size: 14px;
   line-height: 22px;
@@ -705,11 +705,11 @@ a {
   outline: none;
 }
 
-.login-modal__in-btn {
+.modal-login__in-btn {
   width: 350px;
 }
 
-.login-modal__swap-to-reg {
+.modal-login__swap-to-reg {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -725,12 +725,12 @@ a {
   font-family: "Montserrat";
 }
 
-.modal-registration__top {
+.modal-top {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.modal-registration__title {
+.modal-top__title {
   font-weight: 700;
   font-size: 32px;
   line-height: 39px;
@@ -739,25 +739,83 @@ a {
   margin-bottom: 10px;
 }
 
-.modal-registration__subtitle {
+.modal-top__subtitle {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
   color: #49423D;
 }
 
-.modal-registration__forms {
+.modal-forms {
   display: flex;
   flex-direction: column;
 }
 
-.modal-registration__input {
+.modal-input_with-bcg {
   background-color: #f5f5f6;
   margin-bottom: 30px;
 }
 
 .modal-registration__btn {
   width: 410px;
+}
+
+.choose-file {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.choose-file__lable {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.choose-file__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.choose-file__input {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+}
+
+.modal-menu {
+  margin-right: 50vw;
+  margin-top: -30vh;
+}
+
+.info-block_menu {
+  position: relative;
+}
+
+.info-block__title_menu {
+  cursor: pointer;
+}
+
+.info-block__list_menu {
+  position: absolute;
+  top: 0;
+  left: 110%;
+  right: 100%;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.info-block__list_active {
+  right: -150%;
+}
+
+.info-block__list-link_menu {
+  color: #49423D;
+}
+.info-block__list-link_menu:hover {
+  color: #8DB338;
 }
 
 .footer {
@@ -791,7 +849,7 @@ a {
   padding-top: 20px;
 }
 
-.footer-content__list-title {
+.info-block__title {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -799,18 +857,20 @@ a {
   margin-bottom: 20px;
 }
 
-.footer-content__list-item {
+.info-block__list-item {
   margin-bottom: 20px;
 }
 
-.footer-content__list-link {
+.info-block__list-link {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #f5f5f6;
   transition: all 0.2s ease;
 }
-.footer-content__list-link:hover {
+.info-block__list-link_footer {
+  color: #f5f5f6;
+}
+.info-block__list-link_footer:hover {
   color: #8DB338;
 }
 
