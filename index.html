@@ -1,513 +1,525 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Domosbor</title>
-    <link rel="stylesheet" href="css/style.min.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Domosbor</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap">
+	<link rel="stylesheet" href="styles/normalize v8.0.1.css">
+	<link rel="stylesheet" href="styles/styles.min.css">
 </head>
+
 <body>
-<header class="header">   
-    <div class="top-bar container">
-        <nav class="top-bar__nav nav">
-            <div class="nav__item modal-btn">
-                <span class="modal-btn__span first"></span>
-                <span class="modal-btn__span mid"></span>                
-                <span class="modal-btn__span last"></span>               
-            </div>
-            <div class="nav__item search">
-                <img class="search__btn" src="images/search.svg" alt="" >
-                <input class="search__input" type="text"  placeholder="Поиск...">
-            </div>
-            <div class="nav__item lang-switch">
-                <div id="ru" class="lang-switch__item lang-switch__item_active">RU</div>
-                <div id="en" class="lang-switch__item">EN</div>
-                <span class="lang-switch__wrap lang-switch__wrap_ru"></span>
-            </div>
-        </nav>
-        <div class="top-bar__logo logo">
-            <a href="#">
-                <img src="images/logo.svg" alt="">
-            </a>
-        </div>
-        <div class="top-bar__right-items right-items">
-            <div class="right-items__item heart">
-                <img src="images/heart.svg" alt="">
-            </div>
-            <div class="right-items__item login">
-                <img src="images/login.svg" alt="">
-            </div>
-            <div class="right-items__item callback">
-                <div class="callback__number">8 (983) 285-36-57</div>
-                <div class="callback__offer">Заказать обратный звонок</div>
-            </div>
-        </div>
-    </div>
-</header>
+	<header class="header">
+		<div class="header__bar container">
+			<nav class="header__nav">
+				<div class="header__modal-btn">
+					<span class="header__modal-btn-span first"></span>
+					<span class="header__modal-btn-span mid"></span>
+					<span class="header__modal-btn-span last"></span>
+				</div>
+				<div class="header__search search">
+					<img class="search__btn" src="images/search.svg" alt="">
+					<input class="search__input" type="text" placeholder="Поиск...">
+				</div>
+				<div class="header__lang-switch lang-switch">
+					<div id="ru" class="lang-switch__option lang-switch__option_active">RU</div>
+					<div id="en" class="lang-switch__option">EN</div>
+					<span class="lang-switch__wrap lang-switch__wrap_ru"></span>
+				</div>
+			</nav>
+			<div class="header__logo logo">
+				<a href="#">
+					<img src="images/logo.svg" alt="">
+				</a>
+			</div>
+			<div class="header__right-items">
+				<div class="header__favorites">
+					<img src="images/heart.svg" alt="">
+				</div>
+				<div class="header__login">
+					<img src="images/login.svg" alt="">
+				</div>
+				<div class="header__callback callback">
+					<div class="header__callback-number callback__number">8 (983) 285-36-57</div>
+					<div class="header__callback-offer callback__offer">Заказать обратный звонок</div>
+					<img class="header__callback-mobile callback__mobile" src="images/callback-mobile.png" alt="">
+				</div>
+			</div>
+		</div>
+	</header>
 
-<div class="modal">
-    <div class="modal__content">
-        
-    </div>
-</div>
+	<div class="modal">
+		<div class="modal__content">
+		</div>
+	</div>
 
-<main class="main">
-    <section class="main-offer">
-        <div class="main-offer__top-text">
-            <div class="container">
-                <h1 class="main-offer__title">
-                    Построй свою мечту
-                </h1>
-                <p class="main-offer__text">
-                    Наш сервис каждый день помогает купить минимум один домокомплект!
-                </p>
-            </div>
-        </div>
-        <div class="main-offer__config config">
-            <div class="container">
-                <div class="config__choice">
-                    <button class="config__btn btn btn_active" id="build">
-                        Построить
-                    </button>
-                    <button class="config__btn btn" id="buy">
-                        Купить
-                    </button>
-                    <button class="config__btn btn" id="rent">
-                        Арендовать
-                    </button>
-                    <div class="config__choice-more">
-                        <img src="images/config-more.svg" alt="">
-                        <span>Расширенный поиск</span>
-                    </div>
-                </div>
-                <div class="config__options grid">
-                    <div class="option">
-                        <span>Тип строения</span>
-                        <div class="option__form dropdown">
-                            <span class="dropdown__selected">Дом</span>
-                            <img class="dropdown__form-arrow" src="images/option-arrow.svg" alt="">
-                            <ul class="dropdown__list">
-                                <li class="dropdown__option">Дом</li>
-                                <li class="dropdown__option">Баня</li>
-                                <li class="dropdown__option">Гараж</li>
-                                <li class="dropdown__option">Навес</li>
-                                <li class="dropdown__option">Коммерческий об.</li>
-                                <li class="dropdown__option">Любой</li>
-                            </ul>
-                        </div>   
-                    </div>
-                    <div class="option">
-                        <span>Габариты, м</span>
-                        <div class="option__form dropdown">
-                            <span class="dropdown__selected">до 10 x 10</span>
-                            <img class="dropdown__form-arrow" src="images/option-arrow.svg" alt="">
-                            <ul class="dropdown__list">
-                                <li class="dropdown__option">до 10 х 10</li>
-                                <li class="dropdown__option">до 20 х 20</li>
-                                <li class="dropdown__option">до 30 х 30</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="option option_with-slider">
-                        <span>Общая площадь, м²</span>
-                        <div class="option__form range">
-                            <div class="range__val-min">
-                                <span class="">от</span>
-                                <input class="range__in" type="text" data-="1"></input>
-                            </div>
-                            <div class="range__val-max">
-                                <span class="">до</span>
-                                <input class="range__in" type="text" data-="1"></input>
-                            </div>
+	<main class="main">
+		<section class="main-offer">
+			<div class="main-offer__top-text">
+				<div class="container">
+					<h1 class="main-offer__title">
+						Построй свою мечту
+					</h1>
+					<p class="main-offer__text">
+						Наш сервис каждый день помогает купить минимум один домокомплект!
+					</p>
+				</div>
+			</div>
+			<div class="main-offer__config config">
+				<div class="container">
+					<div class="config__choice">
+						<button class="config__btn btn btn_active" id="build">
+							Построить
+						</button>
+						<button class="config__btn btn" id="buy">
+							Купить
+						</button>
+						<button class="config__btn btn" id="rent">
+							Арендовать
+						</button>
+						<div class="config__choice-more">
+							<img src="images/config-more.svg" alt="">
+							<span>Расширенный поиск</span>
+						</div>
+					</div>
+					<div class="config__options">
+						<div class="option short1">
+							<span>Тип строения</span>
+							<div class="option__form dropdown">
+								<span class="dropdown__selected">Дом</span>
+								<img class="dropdown__form-arrow" src="images/option-arrow.svg" alt="">
+								<ul class="dropdown__list">
+									<li class="dropdown__option">Дом</li>
+									<li class="dropdown__option">Баня</li>
+									<li class="dropdown__option">Гараж</li>
+									<li class="dropdown__option">Навес</li>
+									<li class="dropdown__option">Коммерческий об.</li>
+									<li class="dropdown__option">Любой</li>
+								</ul>
+							</div>
+						</div>
+						<div class="option short2">
+							<span>Габариты, м</span>
+							<div class="option__form dropdown">
+								<span class="dropdown__selected">до 10 x 10</span>
+								<img class="dropdown__form-arrow" src="images/option-arrow.svg" alt="">
+								<ul class="dropdown__list">
+									<li class="dropdown__option">до 10 х 10</li>
+									<li class="dropdown__option">до 20 х 20</li>
+									<li class="dropdown__option">до 30 х 30</li>
+								</ul>
+							</div>
+						</div>
+						<div class="option_with-slider long1">
+							<span>Общая площадь, м²</span>
+							<div class="option__form range">
+								<div class="range__val-min">
+									<span class="">от</span>
+									<input class="range__in" type="text" data-="1"></input>
+								</div>
+								<div class="range__val-max">
+									<span class="">до</span>
+									<input class="range__in" type="text" data-="1"></input>
+								</div>
 
-                            <input class="range__slider range__slider_1" id="min" type="range" min="50" max="1000" value="50" step="1">
-                            <input class="range__slider range__slider_2" id="max" type="range" min="50" max="1000" value="1000" step="1">
-                      
-                            <span class="range__line"></span>
-                            <span class="range__line range__line_green"></span>
-                        </div>
-                    </div>
-                    <div class="option option_with-slider">
-                        <span>Стоимость, ₽</span>
-                        <div class="option__form range">
-                            <div class="range__val-min">
-                                <span class="">от</span>
-                                <input class="range__in" type="text" data-="1"></input>
-                            </div>
-                            <div class="range__val-max">
-                                <span class="">до</span>
-                                <input class="range__in" type="text" data-="1"></input>
-                            </div>
-                            <input class="range__slider range__slider_1" type="range" min="100000" max="20000000" value="100000" step="50000">
-                            <input class="range__slider range__slider_2" type="range" min="100000" max="20000000" value="20000000" step="50000">
-                            <span class="range__line"></span>
-                            <span class="range__line range__line_green"></span>
-                        </div>
-                    </div>
-                    <button class="config__btn btn-invert">
-                        Подобрать
-                    </button>
-                </div>
-            </div>  
-        </div>
-    </section>
+								<input class="range__slider range__slider_1" id="min" type="range" min="50" max="1000" value="50"
+									step="1">
+								<input class="range__slider range__slider_2" id="max" type="range" min="50" max="1000" value="1000"
+									step="1">
 
-    <section class="content-section">
-        <div class="container">
-            <h2 class="content-section__title">Типы строений</h2>
-            <div class="content-section__content building-types grid-five-cards">
-                <a href="" class="building-types__item house-type">
-                        <div class="building-types__count house-type__count">32</div>
-                        <div class="building-types__name house-type__name">Дома</div>
-                </a>
-            
-                <a href="" class="building-types__item bath-type">
-                    <div class="building-types__count house-type__count">17</div>
-                    <div class="building-types__name house-type__name">Бани</div>
-                </a>
-                
-                <a href="" class="building-types__item garage-type">
-                    <div class="building-types__count house-type__count">15</div>
-                    <div class="building-types__name house-type__name">Гаражи</div>
-                </a>  
-                <a href="" class="building-types__item awning-type">
-                    <div class="building-types__count house-type__count">23</div>
-                    <div class="building-types__name house-type__name">Навесы</div>
-                </a>
-                <a href="" class="building-types__item commercial-type">
-                    <div class="building-types__count house-type__count">26</div>
-                    <div class="building-types__name house-type__name">Коммерческие</div>
-                </a>
-            </div>
-        </div>
-    </section>
+								<span class="range__line"></span>
+								<span class="range__line range__line_green"></span>
+							</div>
+						</div>
+						<div class="option_with-slider long2">
+							<span>Стоимость, ₽</span>
+							<div class="option__form range">
+								<div class="range__val-min">
+									<span class="">от</span>
+									<input class="range__in" type="text" data-="1"></input>
+								</div>
+								<div class="range__val-max">
+									<span class="">до</span>
+									<input class="range__in" type="text" data-="1"></input>
+								</div>
+								<input class="range__slider range__slider_1" type="range" min="100000" max="20000000" value="100000"
+									step="50000">
+								<input class="range__slider range__slider_2" type="range" min="100000" max="20000000" value="20000000"
+									step="50000">
+								<span class="range__line"></span>
+								<span class="range__line range__line_green"></span>
+							</div>
+						</div>
+						<button class="config__btn btn-invert btn1">
+							Подобрать
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <section class="content-section">
-        <div class="container">
-            <h2 class="content-section__title">Технологии строительства</h2>
-            <div class="content-section__content technology-types">
-                <a href="" class="technology-types__item beam-type">
-                    <span class="technology-types__name">Клееный брус</span>       
-                </a>
-                <a href="" class="technology-types__item gun-carriage-type">
-                    <span class="technology-types__name">Лафет</span>  
-                </a>
-                <a href="" class="technology-types__item half-timbered-type">
-                    <span class="technology-types__name">Фахверковые</span>  
-                </a>
-                <a href="" class="technology-types__item log-type">
-                    <span class="technology-types__name">Рубленное бревно</span>                
-                </a>
-                <a href="" class="technology-types__item frame-type">
-                    <span class="technology-types__name">Каркасные</span>               
-                </a>
-                <a href="" class="technology-types__item clt-type">
-                    <span class="technology-types__name">CLT-панели</span>               
-                </a>
-                <a href="" class="technology-types__item panel-frame-type">
-                    <span class="technology-types__name">Панельно-каркасные</span>                
-                </a>
-                <a href="" class="technology-types__item kelo-type">
-                    <span class="technology-types__name">Kelo (Кело)</span>
-                </a>
-            </div>
-        </div>
-    </section>
+		<section class="content-section">
+			<div class="container">
+				<h2 class="content-section__title">Типы строений</h2>
+				<div class="content-section__content building-types grid-five-cards">
+					<a href="" class="building-types__item house-type">
+						<div class="building-types__count house-type__count">32</div>
+						<div class="building-types__name house-type__name">Дома</div>
+					</a>
 
-    <section class="content-section">
-        <div class="container">
-            <h2 class="content-section__title">Полезные ссылки</h2>
-            <div class="content-section__content useful-links grid-five-cards">
-                <div class="useful-links__item">
-                    <div class="useful-links__img num-of-floors"></div>
-                    <div class="useful-links__links">
-                        <h3 class="useful-links__title">По этажности дома</h3>
-                        <ul class="useful-links__list">
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Одноэтажные</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Полутораэтажные</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Двухэтажные</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Трехэтажные</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">С мансардным этажом</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">С цокольным этажом</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="useful-links__item">
-                    <div class="useful-links__img house-style"></div>
-                    <div class="useful-links__links">
-                        <h3 class="useful-links__title">По стилю дома</h3>
-                        <ul class="useful-links__list">
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Лофт</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Хай тек</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Шале</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Барнхаус</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Райта</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Фахверк</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Модерн</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="useful-links__item">
-                    <div class="useful-links__img house-shape"></div>
-                    <div class="useful-links__links">
-                        <h3 class="useful-links__title">По форме дома</h3>
-                        <ul class="useful-links__list">
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">(г) образная</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">(п) образная</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">(т) образная</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Квадратная</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Круглая</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Треугольная</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Прямоугольная</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Многогранная</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="useful-links__item">
-                    <div class="useful-links__img num-of-floors"></div>
-                    <div class="useful-links__links">
-                        <h3 class="useful-links__title">По этажности дома</h3>
-                        <ul class="useful-links__list">
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Одноэтажные</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Полутораэтажные</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Двухэтажные</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Трехэтажные</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">С мансардным этажом</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">С цокольным этажом</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="useful-links__item">
-                    <div class="useful-links__img num-of-floors"></div>
-                    <div class="useful-links__links">
-                        <h3 class="useful-links__title">По этажности дома</h3>
-                        <ul class="useful-links__list">
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Одноэтажные</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Полутораэтажные</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Двухэтажные</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">Трехэтажные</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">С мансардным этажом</a>
-                            </li>
-                            <li class="useful-links__list-item">
-                                <a class="useful-links__link" href="">С цокольным этажом</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>   
-            </div>
-        </div>
-    </section>
+					<a href="" class="building-types__item bath-type">
+						<div class="building-types__count house-type__count">17</div>
+						<div class="building-types__name house-type__name">Бани</div>
+					</a>
 
-    <section class="bestsellers">
+					<a href="" class="building-types__item garage-type">
+						<div class="building-types__count house-type__count">15</div>
+						<div class="building-types__name house-type__name">Гаражи</div>
+					</a>
+					<a href="" class="building-types__item awning-type">
+						<div class="building-types__count house-type__count">23</div>
+						<div class="building-types__name house-type__name">Навесы</div>
+					</a>
+					<a href="" class="building-types__item commercial-type">
+						<div class="building-types__count house-type__count">26</div>
+						<div class="building-types__name house-type__name">Коммерческие</div>
+					</a>
+				</div>
+			</div>
+		</section>
 
-    </section>
+		<section class="content-section">
+			<div class="container">
+				<h2 class="content-section__title">Технологии строительства</h2>
+				<div class="content-section__content technology-types">
+					<a href="" class="technology-types__item beam-type">
+						<span class="technology-types__name">Клееный брус</span>
+					</a>
+					<a href="" class="technology-types__item gun-carriage-type">
+						<span class="technology-types__name">Лафет</span>
+					</a>
+					<a href="" class="technology-types__item half-timbered-type">
+						<span class="technology-types__name">Фахверковые</span>
+					</a>
+					<a href="" class="technology-types__item log-type">
+						<span class="technology-types__name">Рубленное бревно</span>
+					</a>
+					<a href="" class="technology-types__item frame-type">
+						<span class="technology-types__name">Каркасные</span>
+					</a>
+					<a href="" class="technology-types__item clt-type">
+						<span class="technology-types__name">CLT-панели</span>
+					</a>
+					<a href="" class="technology-types__item panel-frame-type">
+						<span class="technology-types__name">Панельно-каркасные</span>
+					</a>
+					<a href="" class="technology-types__item kelo-type">
+						<span class="technology-types__name">Kelo (Кело)</span>
+					</a>
+				</div>
+			</div>
+		</section>
 
-</main>
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-content__info-lists">
-                <ul class="footer-content__commercial-list">
-                    <li class="footer-content__commercial-list-item">
-                        <div class="logo logo_footer-logo">
-                            <a href="#">
-                                <img src="images/logo-invert.svg" alt="">
-                            </a>
-                        </div>
-                    </li>
-                    <li class="footer-content__commercial-list-item">ООО «Pavel»</li>
-                    <li class="footer-content__commercial-list-item">ИНН: 3214756026</li>
-                    <li class="footer-content__commercial-list-item">ОГРН: 6215600092732</li>
-                    <li class="footer-content__commercial-list-item">Сервис DOMOSBOR</li>
-                </ul>
-                <div class="footer-content__list info-block">
-                    <h3 class="info-block__title">Типы строений</h3>
-                    <ul class="info-block__list">
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Дома</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Бани</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Гаражи</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Навесы</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Коммерческие</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-content__list info-block">
-                    <h3 class="info-block__title">Сервис</h3>
-                    <ul class="info-block__list">
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">О сервисе</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Галерея</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Блог</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Отзывы</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Услуги</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-content__list info-block">
-                    <h3 class="info-block__title">Информация</h3>
-                    <ul class="info-block__list">
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Оплата</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Документы</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Контакты</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Сотрудничество</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-content__list info-block">
-                    <h3 class="info-block__title">Партнеры сервиса</h3>
-                    <ul class="info-block__list">
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Архитекторы</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Дизайнеры</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">Заводы</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-content__list info-block">
-                    <ul class="info-block__list">
-                        <li class="info-block__list-item">
-                            <a href="#" class="footer-content__list-title-link">DOMOSBOR - Магазин</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="footer-content__list-title-link">DOMOSBOR - Форум</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <div class="callback">
-                                <div class="callback__number callback__number_footer">8 (983) 285-36-57</div>
-                                <div class="callback__offer">Заказать обратный звонок</div>
-                            </div>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer">pashpull.dev@gmail.com</a>
-                        </li>
-                        <li class="info-block__list-item">
-                            <a href="#" class="info-block__list-link info-block__list-link_footer address">Санкт-Петербург,<br>Московский пр. 22,<br>офис 305</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-content__social">
-                <div class="social footer-content__social-bar">
-                    <a href="https://t.me/pash_pull" class="social__link" target="_blank">
-                        <img src="images/tg.svg" alt="">
-                    </a>
-                    <a href="#" class="social__link">
-                        <img src="images/instagramm.svg" alt="">
-                    </a>
-                    <a href="https://vk.com/q2853657" class="social__link" target="_blank">
-                        <img src="images/vk.svg" alt="">
-                    </a>
-                    <a href="#" class="social__link">
-                        <img src="images/youtube.svg" alt="">
-                    </a>
-                    <a href="#" class="social__link">
-                        <img src="images/tiktok.svg" alt="">
-                    </a>
-                    <a href="#" class="social__link">
-                        <img src="images/twitter.svg" alt="">
-                    </a>
-                    <a href="#" class="social__link">
-                        <img src="images/facebook.svg" alt="">
-                    </a>
-                </div>
-                <a href="#" class="footer-content__political">Политика конфиденциальности</a>
-                <span href="#" class="footer-content__political">© 2022 «DOMOSBOR». Все права защищены.</span>
-            </div>
-        </div>
-    </div>
-</footer>
-<script src="js/main.min.js"></script>
+		<section class="content-section">
+			<div class="container">
+				<h2 class="content-section__title">Полезные ссылки</h2>
+				<div class="content-section__content useful-links grid-five-cards">
+					<div class="useful-links__item">
+						<div class="useful-links__img num-of-floors"></div>
+						<div class="useful-links__links">
+							<h3 class="useful-links__title">По этажности дома</h3>
+							<ul class="useful-links__list">
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Одноэтажные</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Полутораэтажные</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Двухэтажные</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Трехэтажные</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">С мансардным этажом</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">С цокольным этажом</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="useful-links__item">
+						<div class="useful-links__img house-style"></div>
+						<div class="useful-links__links">
+							<h3 class="useful-links__title">По стилю дома</h3>
+							<ul class="useful-links__list">
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Лофт</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Хай тек</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Шале</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Барнхаус</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Райта</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Фахверк</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Модерн</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="useful-links__item">
+						<div class="useful-links__img house-shape"></div>
+						<div class="useful-links__links">
+							<h3 class="useful-links__title">По форме дома</h3>
+							<ul class="useful-links__list">
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">(г) образная</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">(п) образная</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">(т) образная</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Квадратная</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Круглая</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Треугольная</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Прямоугольная</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Многогранная</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="useful-links__item">
+						<div class="useful-links__img num-of-floors"></div>
+						<div class="useful-links__links">
+							<h3 class="useful-links__title">По этажности дома</h3>
+							<ul class="useful-links__list">
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Одноэтажные</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Полутораэтажные</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Двухэтажные</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Трехэтажные</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">С мансардным этажом</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">С цокольным этажом</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="useful-links__item">
+						<div class="useful-links__img num-of-floors"></div>
+						<div class="useful-links__links">
+							<h3 class="useful-links__title">По этажности дома</h3>
+							<ul class="useful-links__list">
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Одноэтажные</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Полутораэтажные</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Двухэтажные</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">Трехэтажные</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">С мансардным этажом</a>
+								</li>
+								<li class="useful-links__list-item">
+									<a class="useful-links__link" href="">С цокольным этажом</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="bestsellers">
+
+		</section>
+
+	</main>
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-content">
+				<div class="footer-content__info-lists">
+					<ul class="footer-content__commercial-list">
+						<li class="footer-content__commercial-list-item">
+							<div class="logo logo_footer-logo">
+								<a href="#">
+									<img src="images/logo-invert.svg" alt="">
+								</a>
+							</div>
+						</li>
+						<li class="footer-content__commercial-list-item">ООО «Pavel»</li>
+						<li class="footer-content__commercial-list-item">ИНН: 3214756026</li>
+						<li class="footer-content__commercial-list-item">ОГРН: 6215600092732</li>
+						<li class="footer-content__commercial-list-item">Сервис DOMOSBOR</li>
+					</ul>
+					<div class="footer-content__list info-block">
+						<h3 class="info-block__title">Типы строений</h3>
+						<ul class="info-block__list">
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Дома</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Бани</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Гаражи</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Навесы</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Коммерческие</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-content__list info-block">
+						<h3 class="info-block__title">Сервис</h3>
+						<ul class="info-block__list">
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">О сервисе</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Галерея</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Блог</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Отзывы</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Услуги</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-content__list info-block">
+						<h3 class="info-block__title">Информация</h3>
+						<ul class="info-block__list">
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Оплата</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Документы</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Контакты</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Сотрудничество</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-content__list info-block">
+						<h3 class="info-block__title">Партнеры сервиса</h3>
+						<ul class="info-block__list">
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Архитекторы</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Дизайнеры</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">Заводы</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer-content__list info-block">
+						<ul class="info-block__list">
+							<li class="info-block__list-item">
+								<a href="#" class="footer-content__list-title-link">DOMOSBOR - Магазин</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="footer-content__list-title-link">DOMOSBOR - Форум</a>
+							</li>
+							<li class="info-block__list-item">
+								<div class="callback">
+									<div class="callback__number callback__number_footer">8 (983) 285-36-57</div>
+									<div class="callback__offer">Заказать обратный звонок</div>
+								</div>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#" class="info-block__list-link info-block__list-link_footer">pashpull.dev@gmail.com</a>
+							</li>
+							<li class="info-block__list-item">
+								<a href="#"
+									class="info-block__list-link info-block__list-link_footer address">Санкт-Петербург,<br>Московский пр.
+									22,<br>офис 305</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="footer-content__social">
+					<div class="social footer-content__social-bar">
+						<a href="https://t.me/pash_pull" class="social__link" target="_blank">
+							<img src="images/tg.svg" alt="">
+						</a>
+						<a href="#" class="social__link">
+							<img src="images/instagramm.svg" alt="">
+						</a>
+						<a href="https://vk.com/q2853657" class="social__link" target="_blank">
+							<img src="images/vk.svg" alt="">
+						</a>
+						<a href="#" class="social__link">
+							<img src="images/youtube.svg" alt="">
+						</a>
+						<a href="#" class="social__link">
+							<img src="images/tiktok.svg" alt="">
+						</a>
+						<a href="#" class="social__link">
+							<img src="images/twitter.svg" alt="">
+						</a>
+						<a href="#" class="social__link">
+							<img src="images/facebook.svg" alt="">
+						</a>
+					</div>
+					<a href="#" class="footer-content__political">Политика конфиденциальности</a>
+					<span href="#" class="footer-content__political">© 2022 «DOMOSBOR». Все права защищены.</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="scripts/main.min.js"></script>
 </body>
+
 </html>
